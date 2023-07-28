@@ -52,18 +52,18 @@
                             <nav>
                                 <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="courses.html">Trainer</a></li>
-                                    <li><a href="pricing.html">Membeship</a></li>
+                                    <li><a href="Trainers.html">Trainer</a></li>
+                                    <li><a href="membership.html">Membeship</a></li>
                                     <li><a href="gallery.html">Diet Plan</a></li>
-                                    <li><a href="contact.html">Equipment</a></li>
-                                    <li><a href="about.html">About us</a></li>
+                                    <li><a href="equipments.html">Equipment</a></li>
+                                    <li><a href="about.html">About us</a></li>     
                                 </ul>
                             </nav>
                         </div>          
                         <!-- Header-btn -->
-                        <div class="header-btns d-none d-lg-block f-right">
+                        <!-- <div class="header-btns d-none d-lg-block f-right">
                            <a href="contact.html" class="btn">Login </a>
-                       </div>
+                       </div> -->
                        <!-- Mobile Menu -->
                        <div class="col-12">
                         <div class="mobile_menu d-block d-lg-none"></div>
@@ -72,6 +72,37 @@
             </div>
         </div>
     </div>
+
+    <style>
+
+                .container_video {
+                  display: flex;
+                  flex-wrap: wrap;
+                }
+            
+                .trainer-video {
+                 
+                  margin: 10px;
+                  cursor: pointer;
+                  border: 1px solid #ddd;
+                  border-radius: 5px;
+                }
+            
+                .trainer-video img {
+                  width: 100px;
+                  height: 140px;
+                  object-fit: cover;
+                  border-top-left-radius: 5px;
+                  border-top-right-radius: 5px;
+                }
+            
+                .trainer-video .video-title {
+                  padding: 5px;
+                }
+            
+               
+              </style>
+            
     <!-- Header End -->
 </header>
 <main>
@@ -82,7 +113,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="hero-cap hero-cap2 pt-70">
-                            <h2>Trainers</h2>
+                            <h2>Trainer's Lessons</h2>
                         </div>
                     </div>
                 </div>
@@ -93,75 +124,58 @@
     <!--? Team -->
     <section class="team-area fix section-padding30">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section-tittle text-center mb-55">
-                        <h2>Our trainers</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="assets/img/trainers/trainer1.png" alt="" style="height: 250px; width: 362px;">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="services.html">Steve Hudson</a></h5>
-                            <p>Bachelor's degree in exercise science, physical education and kinesiology.
-                                Certified personal trainer (CPT) from the reputable organization of American College of Sports Medicine (ACSM).
-                                CPR and AED certification.
-                                5+ years of experience working as a personal trainer.
-                                Experience working with a variety of clients, including those with different fitness levels and goals.
-                                Excellent knowledge of anatomy, physiology, and exercise science.
-                                Ability to assess clients' fitness levels and develop individualized training programs.
-                                Ability to motivate and coach clients.
-                                Excellent communication and interpersonal skills.</p>
-
-                                <a  class="border-btn">Select</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="assets/img/trainers/trainer2.png" alt="" style="height: 250px; width: 362px;">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="services.html">Edward Collins </a></h5>
-                            <p>Bachelor's degree in Exercise Science. equipped  with a solid foundation in anatomy, physiology, and exercise programming.
-                                Completed a nationally recognized certification program that ensures competence in designing safe and effective workout routines tailored to individual needs and goals.
-                                10 years of experience as a professional workout trainer.
-                                Maintain current certification in cardiopulmonary resuscitation (CPR) and first aid.
-                                Specialized in Strength Training, Cardiovascular Conditioning and Functional Training.
-                                 </p>
-
-                                 <a  class="border-btn">Select</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="assets/img/trainers/trainer3.png" alt="" style="height: 250px; width: 362px;">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="services.html">Weight Loss</a></h5>
-                            <p>Associate's degree in physical education.
-                                Certified personal trainer (CPT) from the International Sports Sciences Association (ISSA).
-                                8 years of experience as a professional trainer.
-                                Excellent knowledge of human anatomy and physiology.
-                                Strong understanding of exercise programming.
-                                Specialized in weight lifting, stretching & breathing, group exercise instruction, sports performance, corrective exercise, nutrition and rehabilitation.
-                                Ability to assess clients' fitness levels and create individualized exercise plans.
-                                </p>
-
-                            
-                                <a  class="border-btn">Select</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              <div class="container_video" id="trainerContainer">
+                <!-- Trainer videos will be dynamically added here -->
+              </div>
+            
+              <div class="library" id="library">
+                <!-- Selected videos will be dynamically added here -->
+              </div>
+            
+              <script>
+                // Sample video URLs (you can replace these with your own)
+                const videoURLs = [
+                  'https://youtu.be/Th2qSOGPXFo',
+                  'https://www.example.com/video2.mp4',
+                  'https://www.example.com/video3.mp4',
+                  'https://youtu.be/Th2qSOGPXFo',
+                  'https://www.example.com/video2.mp4',
+                  'https://www.example.com/video3.mp4',
+                  'https://youtu.be/Th2qSOGPXFo',
+                  'https://www.example.com/video2.mp4',
+                  'https://www.example.com/video3.mp4',
+                  // Add more video URLs here
+                ];
+            
+                function createVideoElement(url, title) {
+                  const videoElement = document.createElement('div');
+                  videoElement.className = 'trainer-video';
+                  videoElement.innerHTML = `
+                    <video controls>
+                      <source src="${url}" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-title">${title}</div>
+                  `;
+                  videoElement.addEventListener('click', () => addToLibrary(url, title));
+                  return videoElement;
+                }
+            
+               
+            
+                document.addEventListener('DOMContentLoaded', () => {
+                  const trainerContainer = document.getElementById('trainerContainer');
+            
+                  // Populate trainer videos
+                  for (let i = 0; i < videoURLs.length; i++) {
+                    const url = videoURLs[i];
+                    const title = `Trainer Video ${i + 1}`;
+                    const videoElement = createVideoElement(url, title);
+                    trainerContainer.appendChild(videoElement);
+                  }
+                });
+              </script>
+            
         </div>
     </section>
     <!-- Services End -->

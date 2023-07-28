@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>VFC Studio </title>
+    <title>Gym trainer | Template </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -33,7 +33,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/loder.png" alt="">
+                    <img src="assets/img/logo/Logo.png" alt="">
                 </div>
             </div>
         </div>
@@ -54,18 +54,18 @@
                             <nav>
                                 <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="Trainers.html">Trainer</a></li>
-                                    <li><a href="membership.html">Membeship</a></li>
+                                    <li><a href="courses.html">Trainer</a></li>
+                                    <li><a href="pricing.html">Membeship</a></li>
                                     <li><a href="gallery.html">Diet Plan</a></li>
                                     <li><a href="equipments.html">Equipment</a></li>
-                                    <li><a href="about.html">About us</a></li>     
+                                    <li><a href="about.html">About us</a></li>
                                 </ul>
                             </nav>
                         </div>
                         <!-- Header-btn -->
                         <!-- <div class="header-btns d-none d-lg-block f-right">
-                            <a href="contact.html" class="btn">Login</a>
-                        </div> -->
+                           <a href="contact.html" class="btn">Login</a>
+                       </div> -->
                         <!-- Mobile Menu -->
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
@@ -75,67 +75,113 @@
             </div>
         </div>
         <!-- Header End -->
+
+
+        <style>
+            .payment_card_container {
+             
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              margin: 0;
+              padding: 0;
+            
+            }
+        
+            .container {
+              width: 400px;
+            }
+        
+            .payment-card {
+              background-color: #ffffff;
+              padding: 20px;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+        
+            .card-logo img {
+              max-width: 100px;
+            }
+        
+            .form-group {
+              margin-bottom: 15px;
+            }
+        
+            .form-group label {
+              display: block;
+              margin-bottom: 5px;
+            }
+        
+            .form-group input {
+              width: 100%;
+              padding: 8px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            }
+        
+            .form-row {
+              display: flex;
+              justify-content: space-between;
+            }
+        
+            button {
+              display: block;
+              width: 100%;
+              padding: 12px;
+              background-color: #007bff;
+              color: #ffffff;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+        
+            button:hover {
+              background-color: #0056b3;
+            }
+          </style>
     </header>
     <main>
-        <!--? Hero Start -->
-        <div class="slider-area2">
-            <div class="slider-height2 d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap hero-cap2 pt-70">
-                                <h2>About Us</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Hero End -->
-        <!--? Team -->
-        <section class="team-area pt-80">
+
+        <!-- Courses area start -->
+        <section class="pricing-area section-padding30 fix">
             <div class="container">
+                <div class="payment_card_container">
 
-            </div>
-            </div>
-        </section>
-        <!-- Services End -->
-        <!--? About Area-2 Start -->
-        <section class="about-area2 fix pb-padding pt-50 pb-80">
-            <div class="support-wrapper align-items-center">
-                <div class="right-content2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                    <!-- img -->
-                    <div class="right-img">
-                        <img src="assets/img/gallery/team.jpg" alt="">
-                    </div>
-                </div>
-                <div class="left-content2">
-                    <!-- section tittle -->
-                    <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="front-text">
-                            <h2 class="">Our Story</h2>
-                            <p>Welcome to our virtual fitness center, where we offer personalized training programs,
-                                equipment purchasing options, and expert diet planning to revolutionize your fitness
-                                journey. Our center is designed to cater to your unique needs and goals, providing
-                                comprehensive support for your overall well-being. With our highly trained trainers,
-                                you'll receive professional guidance and motivation to maximize your results. Our
-                                customized training programs encompass various exercises and intensity levels, while our
-                                equipment purchasing service helps you select the right tools for your goals and budget.
-                                Additionally, our nutritionists and dietitians will create a balanced meal plan tailored
-                                to your fitness goals. With a membership, you'll have unlimited access to our services,
-                                allowing you to achieve your goals conveniently and confidently
-                                from the comfort of your own home. Join us today and start your transformative fitness
-                                journey.</p>
-
-
+                    <div class="container">
+                        <div class="payment-card">
+                            <div class="card-logo">
+                                <img src="https://www.seekpng.com/png/detail/87-870470_credit-card-icons-credit-card.png"
+                                    alt="Visa">
+                            </div>
+                            <form id="payment-form">
+                                <div class="form-group">
+                                    <label for="card-number">Card Number</label>
+                                    <input type="text" id="card-number" placeholder="Enter your card number" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-holder">Card Holder</label>
+                                    <input type="text" id="card-holder" placeholder="Enter card holder's name" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiry-date">Expiry Date</label>
+                                        <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" placeholder="CVV" required>
+                                    </div>
+                                </div>
+                                <button type="submit">Pay Now</button>
+                            </form>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
-        <!-- About Area End -->
-
-
+        <!-- Courses area End -->
 
     </main>
     <footer>
@@ -160,12 +206,12 @@
                                             <!-- Main-menu -->
                                             <div class="main-menu main-menu2 text-center">
                                                 <nav>
-                                                    <ul>
+                                                    <ul id="navigation">
                                                         <li><a href="index.html">Home</a></li>
-                                                        <li><a href="courses.html">Trainer</a></li>
-                                                        <li><a href="pricing.html">Membeship</a></li>
+                                                        <li><a href="Trainers.html">Trainer</a></li>
+                                                        <li><a href="membership.html">Membeship</a></li>
                                                         <li><a href="gallery.html">Diet Plan</a></li>
-                                                        <li><a href="contact.html">Equipment</a></li>
+                                                        <li><a href="equipments.html">Equipment</a></li>
                                                         <li><a href="about.html">About us</a></li>
                                                     </ul>
                                                 </nav>
@@ -249,6 +295,61 @@
     <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
+
+    <script>
+
+        const form = document.getElementById('payment-form');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            if (validateForm()) {
+                alert('Payment successful!');
+                // You can add actual payment processing logic here
+            }
+        });
+
+        function validateForm() {
+            const cardNumberInput = document.getElementById('card-number');
+            const expiryDateInput = document.getElementById('expiry-date');
+            const cvvInput = document.getElementById('cvv');
+
+            if (!isValidCardNumber(cardNumberInput.value)) {
+                alert('Invalid card number');
+                return false;
+            }
+
+            if (!isValidExpiryDate(expiryDateInput.value)) {
+                alert('Invalid expiry date');
+                return false;
+            }
+
+            if (!isValidCVV(cvvInput.value)) {
+                alert('Invalid CVV');
+                return false;
+            }
+
+            return true;
+        }
+
+        function isValidCardNumber(cardNumber) {
+            // Implement your card number validation logic here
+            // For example, you could use regular expressions to check for valid formats
+            return /^\d{16}$/.test(cardNumber);
+        }
+
+        function isValidExpiryDate(expiryDate) {
+            // Implement your expiry date validation logic here
+            // For example, you could check if the date is in the future
+            return /^\d{2}\/\d{2}$/.test(expiryDate);
+        }
+
+        function isValidCVV(cvv) {
+            // Implement your CVV validation logic here
+            // For example, you could check if it's a 3 or 4 digit number
+            return /^\d{3,4}$/.test(cvv);
+        }
+
+    </script>
 
 </body>
 
