@@ -1,28 +1,33 @@
+var login = new Vue({
+  el: "#loginForm",
+  data: {
+      username: '',
+      password: ''
+  },
+  mounted() {
+      
+  },
+  updated() {
+      
+  },
+  methods:{
 
+      authenticate: function(){
 
-// Function to handle the login process
-function login(username , password) {
+      var credentials  = { password: this.password, email: this.username};
 
+      axios.post('http://localhost:3000/user/authenticate',credentials)
+      .then((res) => {
+          
+          if(res.status == 200){
+              window.location.href = './index.html'
+          }
 
-  
-  // Check if the entered credentials are valid
-  if (username === "aaa" && password === "123") {
-   // showLoginMessage('Login successful!', 'green');
-   console.log("check");
-  } else {
-    showLoginMessage('Invalid username or password.', 'red');
+      })
+      .catch((err)=>{
+          console.log(err)
+          alert('Incorrect email or password');
+      });
+      }
   }
-
-  console.log("check");
-}
-
-// Function to display the login result message
-function showLoginMessage(message, color) {
-  const messageElement = document.getElementById('loginMessage');
-  messageElement.textContent = message;
-  messageElement.style.color = color;
-}
-
-// Attach the login form submit event to the handleLogin function
-const loginForm = document.getElementById('loginForm');
-loginForm.addEventListener('submit', handleLogin);
+})
