@@ -33,7 +33,7 @@ function updateCartDisplay() {
   
     cart.forEach((item, index) => {
       const itemElement = document.createElement('div');
-      itemElement.innerHTML = `${item.name} - $${item.price} <button onclick="removeFromCart(${index})">Remove</button>`;
+      itemElement.innerHTML = `${item.name} - $${item.price} <button onclick="removeFromCart(${index})" >Remove</button>`;
       cartElement.appendChild(itemElement);
     });
   
