@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -24,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="black-bg">
     <!-- ? Preloader Start -->
     <div id="preloader-active">
@@ -56,238 +58,209 @@
                                     <li><a href="membership.html">Membeship</a></li>
                                     <li><a href="gallery.html">Diet Plan</a></li>
                                     <li><a href="equipments.html">Equipment</a></li>
-                                    <li><a href="about.html">About us</a></li>     
+                                    <li><a href="about.html">About us</a></li>
                                 </ul>
                             </nav>
-                        </div>          
+                        </div>
                         <!-- Header-btn -->
                         <!-- <div class="header-btns d-none d-lg-block f-right">
                            <a href="contact.html" class="btn">Login </a>
                        </div> -->
-                       <!-- Mobile Menu -->
-                       <div class="col-12">
-                        <div class="mobile_menu d-block d-lg-none"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <style>
-
-                .container_video {
-                  display: flex;
-                  flex-wrap: wrap;
-                }
-            
-                .trainer-video {
-                 
-                  margin: 10px;
-                  cursor: pointer;
-                  border: 1px solid #ddd;
-                  border-radius: 5px;
-                }
-            
-                .trainer-video img {
-                  width: 100px;
-                  height: 140px;
-                  object-fit: cover;
-                  border-top-left-radius: 5px;
-                  border-top-right-radius: 5px;
-                }
-            
-                .trainer-video .video-title {
-                  padding: 5px;
-                }
-            
-               
-              </style>
-            
-    <!-- Header End -->
-</header>
-<main>
-    <!--? Hero Start -->
-    <div class="slider-area2">
-        <div class="slider-height2 d-flex align-items-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="hero-cap hero-cap2 pt-70">
-                            <h2>Trainer's Lessons</h2>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Hero End -->
-    <!--? Team -->
-    <section class="team-area fix section-padding30">
-        <div class="container">
-              <div class="container_video" id="trainerContainer">
-                <!-- Trainer videos will be dynamically added here -->
-              </div>
-            
-              <div class="library" id="library">
-                <!-- Selected videos will be dynamically added here -->
-              </div>
-            
-              <script>
-                // Sample video URLs (you can replace these with your own)
-                const videoURLs = [
-                  'https://youtu.be/Th2qSOGPXFo',
-                  'https://www.example.com/video2.mp4',
-                  'https://www.example.com/video3.mp4',
-                  'https://youtu.be/Th2qSOGPXFo',
-                  'https://www.example.com/video2.mp4',
-                  'https://www.example.com/video3.mp4',
-                  'https://youtu.be/Th2qSOGPXFo',
-                  'https://www.example.com/video2.mp4',
-                  'https://www.example.com/video3.mp4',
-                  // Add more video URLs here
-                ];
-            
-                function createVideoElement(url, title) {
-                  const videoElement = document.createElement('div');
-                  videoElement.className = 'trainer-video';
-                  videoElement.innerHTML = `
-                    <video controls>
-                      <source src="${url}" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                    <div class="video-title">${title}</div>
-                  `;
-                  videoElement.addEventListener('click', () => addToLibrary(url, title));
-                  return videoElement;
-                }
-            
-               
-            
-                document.addEventListener('DOMContentLoaded', () => {
-                  const trainerContainer = document.getElementById('trainerContainer');
-            
-                  // Populate trainer videos
-                  for (let i = 0; i < videoURLs.length; i++) {
-                    const url = videoURLs[i];
-                    const title = `Trainer Video ${i + 1}`;
-                    const videoElement = createVideoElement(url, title);
-                    trainerContainer.appendChild(videoElement);
-                  }
-                });
-              </script>
-            
-        </div>
-    </section>
-    <!-- Services End -->
 
-    <!-- video_end -->
+        <style>
+            .video iframe {
+                display: flex;
+                padding-left: 20px;
+            }
+        </style>
 
-</main>
-<footer>
-    <!--? Footer Start-->
-    <div class="footer-area black-bg">
-        <div class="container">
-            <div class="footer-top footer-padding">
-                <!-- Footer Menu -->
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="single-footer-caption mb-50 text-center">
-                            <!-- logo -->
-                            <div class="footer-logo wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                                <a href="index.html"><img src="assets/img/logo/Logo.png" alt=""></a>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 pt-70">
+                                <h2>Trainer's Lessons</h2>
                             </div>
-                            <!-- Menu -->
-                            <!-- Header Start -->
-                            <div class="header-area main-header2 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">
-                                <div class="main-header main-header2">
-                                    <div class="menu-wrapper menu-wrapper2">
-                                        <!-- Main-menu -->
-                                        <div class="main-menu main-menu2 text-center">
-                                            <nav>
-                                                <ul>
-                                                    <li><a href="index.html">Home</a></li>
-                                                    <li><a href="courses.html">Trainer</a></li>
-                                                    <li><a href="pricing.html">Membeship</a></li>
-                                                    <li><a href="gallery.html">Diet Plan</a></li>
-                                                    <li><a href="contact.html">Equipment</a></li>
-                                                    <li><a href="about.html">About us</a></li>
-                                                </ul>
-                                            </nav>
-                                        </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+        <!--? Team -->
+        <section class="team-area fix section-padding30">
+            <div class="container">
+                <div class="container_video" id="trainerContainer">
+                    <!-- Trainer videos will be dynamically added here -->
+                </div>
+
+                <div class="raw">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rL5FdSd1tQ4"
+                        title="YouTube video player" frameborder="0">
+
+                    </iframe>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ruX4Le0kBng"
+                        title="YouTube video player" frameborder="0" style="margin-left: 2%;">
+                    </iframe>
+                </div>
+
+                <div class="raw" style="margin-top: 2%;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5DFAcAvT2mI"
+                        title="YouTube video player" frameborder="0">
+
+                    </iframe>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eMjyvIQbn9M"
+                        title="YouTube video player" frameborder="0" style="margin-left: 2%;">
+                    </iframe>
+                </div>
+
+
+                <div class="raw" style="margin-top: 2%;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DXL18E7QRbk"
+                        title="YouTube video player" frameborder="0">
+
+                    </iframe>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eGo4IYlbE5g"
+                        title="YouTube video player" frameborder="0" style="margin-left: 2%;">
+                    </iframe>
+                </div>
+
+
+
+            </div>
+        </section>
+        <!-- Services End -->
+
+        <!-- video_end -->
+
+    </main>
+    <footer>
+        <!--? Footer Start-->
+        <div class="footer-area black-bg">
+            <div class="container">
+                <div class="footer-top footer-padding">
+                    <!-- Footer Menu -->
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="single-footer-caption mb-50 text-center">
+                                <!-- logo -->
+                                <div class="footer-logo wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                                    <a href="index.html"><img src="assets/img/logo/Logo.png" alt=""></a>
+                                </div>
+                                <!-- Menu -->
+                                <!-- Header Start -->
+                                <div class="header-area main-header2 wow fadeInUp" data-wow-duration="2s"
+                                    data-wow-delay=".4s">
+                                    <div class="main-header main-header2">
+                                        <div class="menu-wrapper menu-wrapper2">
+                                            <!-- Main-menu -->
+                                            <div class="main-menu main-menu2 text-center">
+                                                <nav>
+                                                    <ul>
+                                                        <li><a href="index.html">Home</a></li>
+                                                        <li><a href="courses.html">Trainer</a></li>
+                                                        <li><a href="pricing.html">Membeship</a></li>
+                                                        <li><a href="gallery.html">Diet Plan</a></li>
+                                                        <li><a href="contact.html">Equipment</a></li>
+                                                        <li><a href="about.html">About us</a></li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                <!-- Header End -->
+                                <!-- social -->
+                                <div class="footer-social mt-30 wow fadeInUp" data-wow-duration="3s"
+                                    data-wow-delay=".8s">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                </div>
                             </div>
-                            <!-- Header End -->
-                            <!-- social -->
-                            <div class="footer-social mt-30 wow fadeInUp" data-wow-duration="3s" data-wow-delay=".8s">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-12">
+                            <div class="footer-copy-right text-center">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;
+                                    <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                                    Property of VFC </a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <div class="row d-flex align-items-center">
-                    <div class="col-lg-12">
-                        <div class="footer-copy-right text-center">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Property of VFC </a>
-                              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- Footer End-->
-  </footer>
-  <!-- Scroll Up -->
-  <div id="back-top" >
-    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
-</div>
-<!-- JS here -->
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top">
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+    <!-- JS here -->
 
-<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-<!-- Jquery, Popper, Bootstrap -->
-<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-<script src="./assets/js/popper.min.js"></script>
-<script src="./assets/js/bootstrap.min.js"></script>
-<!-- Jquery Mobile Menu -->
-<script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
 
-<!-- Jquery Slick , Owl-Carousel Plugins -->
-<script src="./assets/js/owl.carousel.min.js"></script>
-<script src="./assets/js/slick.min.js"></script>
-<!-- One Page, Animated-HeadLin -->
-<script src="./assets/js/wow.min.js"></script>
-<script src="./assets/js/animated.headline.js"></script>
-<script src="./assets/js/jquery.magnific-popup.js"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
 
-<!-- Date Picker -->
-<script src="./assets/js/gijgo.min.js"></script>
-<!-- Nice-select, sticky -->
-<script src="./assets/js/jquery.nice-select.min.js"></script>
-<script src="./assets/js/jquery.sticky.js"></script>
+    <!-- Date Picker -->
+    <script src="./assets/js/gijgo.min.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
 
-<!-- counter , waypoint,Hover Direction -->
-<script src="./assets/js/jquery.counterup.min.js"></script>
-<script src="./assets/js/waypoints.min.js"></script>
-<script src="./assets/js/jquery.countdown.min.js"></script>
-<script src="./assets/js/hover-direction-snake.min.js"></script>
+    <!-- counter , waypoint,Hover Direction -->
+    <script src="./assets/js/jquery.counterup.min.js"></script>
+    <script src="./assets/js/waypoints.min.js"></script>
+    <script src="./assets/js/jquery.countdown.min.js"></script>
+    <script src="./assets/js/hover-direction-snake.min.js"></script>
 
-<!-- contact js -->
-<script src="./assets/js/contact.js"></script>
-<script src="./assets/js/jquery.form.js"></script>
-<script src="./assets/js/jquery.validate.min.js"></script>
-<script src="./assets/js/mail-script.js"></script>
-<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
 
-<!-- Jquery Plugins, main Jquery -->	
-<script src="./assets/js/plugins.js"></script>
-<script src="./assets/js/main.js"></script>
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
 
 </body>
+
 </html>
