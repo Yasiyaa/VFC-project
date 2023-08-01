@@ -22,6 +22,67 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/shoppingCart.css">
+
+    <style>
+        .water-intake,
+        .calorie-measurement,
+        .meal-plans,
+        .bmi-calculator {
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #999291;
+            border-radius: 5%;
+
+        }
+
+        progress {
+            width: 100%;
+        }
+
+        bmi-result {
+            font-weight: bold;
+            text-align: center;
+        }
+
+
+        .water-intake {
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .pie-chart {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #f1f1f1;
+            overflow: hidden;
+        }
+
+        .slice {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+            background-color: #df2828;
+            transform-origin: 50% 100%;
+            transform: rotate(0deg);
+            transition: transform 0.5s ease;
+        }
+
+        #water-intake-text {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <!--? Preloader Start -->
 <div id="preloader-active">
@@ -80,7 +141,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="hero-cap hero-cap2 pt-70">
-                            <h2>Shop Online</h2>
+                            <h2>Diet plan</h2>
                         </div>
                     </div>
                 </div>
@@ -93,119 +154,54 @@
         <div class="container">
 
             <div class="row">
-                <section class="products">
-                    <div class="product">
-                        <img src="assets/img/equipments/bench2.jpg" alt="Product 1">
-                        <h2>Bench</h2>
-                        <p>Price: Rs.40 000/=</p>
-                        <button onclick="addToCart('Bench', 40000)">Add to Cart</button>
-                    </div>
 
-                    <div class="product">
-                        <img src="assets/img/equipments/Rear-Delt-Fly-Gym-Machine.jpg" alt="Product 2">
-                        <h2>Rear Delt Fly</h2>
-                        <p>Price: Rs.80 000/=</p>
-                        <button onclick="addToCart('Rear Delt Fly', 80000)">Add to Cart</button>
-                    </div>
-
-                    <div class="product">
-                        <img src="assets/img/equipments/dumbells.jpg" alt="Product 2">
-                        <h2>Dumbells 2 sets</h2>
-                        <p>Price: Rs.15 000/=</p>
-                        <button onclick="addToCart('Dumbells 2 sets', 15000)">Add to Cart</button>
-                    </div>
-
-                    <div class="product">
-                        <img src="assets/img/equipments/2019-Big-Sell-Gym-Equipments-High-Pulldown-Muscle-Machine.webp"
-                            alt="Product 2">
-                        <h2>High Pulldown Machine</h2>
-                        <p>Price: Rs.40 000/=</p>
-                        <button onclick="addToCart('High Pulldown  Machine', 40000)">Add to Cart</button>
-                    </div>
-
-                    <div class="product">
-                        <img src="assets/img/equipments/ss.jpg" alt="Product 2">
-                        <h2>Back Machine </h2>
-                        <p>Price: Rs.95 000/=</p>
-                        <button onclick="addToCart('Back Machine', 95000)">Add to Cart</button>
-                    </div>
-
-                    <div class="product">
-                        <img src="assets/img/equipments/Dumbells (1).jpg" alt="Product 2">
-                        <h2>Dumbells 2 sets</h2>
-                        <p>Price: Rs.35 000/=</p>
-                        <button onclick="addToCart('Dumbells 2 sets', 35000)">Add to Cart</button>
-                    </div>
-
-                    <!-- Add more products here -->
-                </section>
             </div>
             <br>
 
-            <div class="pagination">
-                <!-- Page selector links will be added here -->
-                <a href="#" class="page-link">1</a>
-                <a href="#" class="page-link">2</a>
-                <a href="#" class="page-link">3</a>
-                <!-- Add more page links as needed -->
-            </div>
-            <br>
-
-
-            <div class="raw">
-                <section class="cart">
-                    <h2>Cart</h2>
-                    <ul id="cart-items">
-                        <!-- Cart items will be added dynamically -->
-                    </ul>
-                    <p>Total: $<span id="cart-total">0.00</span></p>
-                    <a href="payment.html">
-                        <button onclick="checkout()">Checkout</button>
-                    </a>
-
-                    <button onclick="clearCart()">Empty Cart</button>
-
-                </section>
-
-                <section class="order_placement">
-                    <h1>Place your order here</h1>
-                </section>
-                <br><br>
-                <section class="raw order_placement">
-                    <form action="#">
-                        <div class="mt-10">
-                            <input type="text" name="first_name" placeholder="First Name"
-                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required
-                                class="single-input">
-                        </div>
-                        <div class="mt-10">
-                            <input type="text" name="last_name" placeholder="Last Name" onfocus="this.placeholder = ''"
-                                onblur="this.placeholder = 'Last Name'" required class="single-input">
-                        </div>
-                        <div class="mt-10">
-                            <input type="text" name="last_name" placeholder="Last Name" onfocus="this.placeholder = ''"
-                                onblur="this.placeholder = 'Last Name'" required class="single-input">
-                        </div>
-                        <div class="mt-10">
-                            <input type="email" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''"
-                                onblur="this.placeholder = 'Email address'" required class="single-input">
-                        </div>
-                        <div class="input-group-icon mt-10">
-
-                            <input type="text" name="address" placeholder="Address" onfocus="this.placeholder = ''"
-                                onblur="this.placeholder = 'Address'" required class="single-input">
-                        </div>
-                        <div class="button-group-area mt-40">
-
-                            <a href="#" class="genric-btn success radius">Place order </a>
-
-                            <a href="#" class="genric-btn danger radius">Cancle</a>
-
-                        </div>
-                    </form>
-                </section>
+            <div class="water-intake">
+                <h2>Daily Water Intake</h2>
+                <div class="pie-chart" id="water-chart">
+                    <div class="slice"></div>
+                </div>
+                <p id="water-intake-text">0 / 8 glasses</p>
             </div>
 
+            <script>
+                function updatePieChart(value, maxValue) {
+                    const chart = document.getElementById('water-chart');
+                    const waterIntakeText = document.getElementById('water-intake-text');
+                    const percentage = (value / maxValue) * 100;
+
+                    chart.style.transform = `rotate(${percentage * 3.6}deg)`; // Multiply by 3.6 to convert percentage to degrees
+                    waterIntakeText.textContent = `${value} / ${maxValue} glasses`;
+                }
+
+                // Call the updatePieChart function with appropriate values to update the pie chart
+                updatePieChart(4, 8); // For example, set the value to 4 out of the maximum value of 8
+
+            </script>
+            <div class="calorie-measurement">
+                <h2>Calorie Measurement</h2>
+                <input type="number" id="calorie-input" placeholder="Enter calorie intake">
+            </div>
+            <div class="meal-plans">
+                <h2>Meal Plans</h2>
+                <!-- Add your meal plan content here -->
+                <ul>
+                    <li>Breakfast: Oatmeal with fruits</li>
+                    <li>Lunch: Grilled chicken with vegetables</li>
+                    <li>Dinner: Salmon with brown rice</li>
+                </ul>
+            </div>
+            <div class="bmi-calculator">
+                <h2>BMI Calculator</h2>
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" placeholder="Enter height">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Enter weight">
+                <button onclick="calculateBMI()">Calculate BMI</button>
+                <p id="bmi-result"></p>
+            </div>
 
 
         </div>
