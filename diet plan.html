@@ -314,6 +314,34 @@
 <script src="./assets/js/main.js"></script>
 
 <script src="../shoppingCart.js"></script>
+<script>
+    function calculateBMI() {
+        const heightInput = document.getElementById('height');
+        const weightInput = document.getElementById('weight');
+        const bmiResult = document.getElementById('bmi-result');
+
+        const height = heightInput.value;
+        const weight = weightInput.value;
+
+        if (height && weight) {
+            const bmi = weight / ((height / 100) ** 2);
+            bmiResult.innerText = `Your BMI: ${bmi.toFixed(2)}`;
+        } else {
+            bmiResult.innerText = 'Please enter both height and weight to calculate BMI.';
+        }
+    }
+
+    document.getElementById('calorie-input').addEventListener('input', function () {
+        const calorieInput = document.getElementById('calorie-input');
+        const progress = document.getElementById('water-meter');
+        const intake = parseInt(calorieInput.value);
+
+        if (!isNaN(intake)) {
+            progress.value = Math.min(intake / 250, 8);
+        }
+    });
+
+</script>
 </body>
 
 </html>
