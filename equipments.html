@@ -29,7 +29,7 @@
         <div class="preloader-inner position-relative">
             <div class="preloader-circle"></div>
             <div class="preloader-img pere-text">
-                <img src="assets/img/logo/loder.png" alt="">
+                <img src="assets/img/logo/Logo.png" alt="">
             </div>
         </div>
     </div>
@@ -52,7 +52,7 @@
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="Trainers.html">Trainer</a></li>
                                 <li><a href="membership.html">Membeship</a></li>
-                                <li><a href="gallery.html">Diet Plan</a></li>
+                                <li><a href="diet plan.html">Diet Plan</a></li>
                                 <li><a href="equipments.html">Equipment</a></li>
                                 <li><a href="about.html">About us</a></li>
                             </ul>
@@ -159,9 +159,6 @@
                         <!-- Cart items will be added dynamically -->
                     </ul>
                     <p>Total: $<span id="cart-total">0.00</span></p>
-                    <a href="payment.html">
-                        <button onclick="checkout()">Checkout</button>
-                    </a>
 
                     <button onclick="clearCart()">Empty Cart</button>
 
@@ -172,34 +169,34 @@
                 </section>
                 <br><br>
                 <section class="raw order_placement">
-                    <form action="#">
+                    <form action="#" id="order_placement">
                         <div class="mt-10">
-                            <input type="text" name="first_name" placeholder="First Name"
+                            <input type="text" name="first_name" placeholder="First Name" v-model="first_name"
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required
                                 class="single-input">
                         </div>
                         <div class="mt-10">
                             <input type="text" name="last_name" placeholder="Last Name" onfocus="this.placeholder = ''"
-                                onblur="this.placeholder = 'Last Name'" required class="single-input">
+                                v-model="last_name
+                                onblur=" this.placeholder='Last Name' required class="single-input">
                         </div>
+
+
                         <div class="mt-10">
-                            <input type="text" name="last_name" placeholder="Last Name" onfocus="this.placeholder = ''"
-                                onblur="this.placeholder = 'Last Name'" required class="single-input">
-                        </div>
-                        <div class="mt-10">
-                            <input type="email" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''"
-                                onblur="this.placeholder = 'Email address'" required class="single-input">
-                        </div>
-                        <div class="input-group-icon mt-10">
 
                             <input type="text" name="address" placeholder="Address" onfocus="this.placeholder = ''"
-                                onblur="this.placeholder = 'Address'" required class="single-input">
+                                onblur="this.placeholder = 'Address'" required class="single-input" v-model="address">
                         </div>
                         <div class="button-group-area mt-40">
 
-                            <a href="#" class="genric-btn success radius">Place order </a>
 
-                            <a href="#" class="genric-btn danger radius">Cancle</a>
+
+                            <a href="payment.html">
+                                <input class="genric-btn success radius" type="button" value="placeorder"
+                                    v-on:click="placeOrder">
+                            </a>
+
+                            <button class="genric-btn danger radius">Cancle</button>
 
                         </div>
                     </form>
