@@ -7,7 +7,13 @@ var login = new Vue({
     items: [
       {
         product: "Back Machine",
-      },
+      },{
+        product: "smith Machine",
+      },{
+        product: "skott Machine",
+      },{
+        product: "chest Machine",
+      }
     ],
     total: 95000,
   },
@@ -15,6 +21,7 @@ var login = new Vue({
   updated() {},
   methods: {
     placeOrder: function () {
+
       var order = {
         firstname: this.first_name,
         lastname: this.last_name,
@@ -22,6 +29,7 @@ var login = new Vue({
         items: this.items,
         total: this.total,
       };
+      
 
       axios
         .post("http://localhost:3000/order/addNew", order)
@@ -32,7 +40,7 @@ var login = new Vue({
         })
         .catch((err) => {
           console.log(err);
-          alert("Incorrect email or password");
+          alert("Error");
         });
     },
   },

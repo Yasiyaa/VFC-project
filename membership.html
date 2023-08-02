@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="vue.js"></script>
 </head>
 <body class="black-bg">
     <!-- ? Preloader Start -->
@@ -107,7 +108,7 @@
                             <div class="about-icon">
                                 <img src="assets/img/icon/price.svg" alt="">
                             </div>
-                            <div class="properties__caption">
+                            <div class="properties__caption" id="membershipSelect">
                                 <span class="month">Basic Membership</span>
                                 <p class="mb-25">$8 / Per session </p>
                                 <div class="single-features">
@@ -144,7 +145,7 @@
                                 </div>
                              
                                
-                                <a href="payment.html" class="border-btn border-btn2">Select Now</a>
+                                <button v-on:click="selectPackage" class="border-btn border-btn2">Select Now</button>
                             </div>
                         </div>
                     </div>
@@ -316,6 +317,11 @@
 </div>
 
 <!-- JS here -->
+
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="membership.js"></script>
 
 <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 <!-- Jquery, Popper, Bootstrap -->
