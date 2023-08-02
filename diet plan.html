@@ -164,6 +164,12 @@
                     <div class="slice"></div>
                 </div>
                 <p id="water-intake-text">0 / 8 glasses</p>
+
+                <div class="calorie-measurement">
+                    <h2>Water Measurement</h2>
+                    <input type="number" id="calorie-input" placeholder="Enter water- intake">
+
+                </div>
             </div>
 
             <script>
@@ -183,16 +189,19 @@
             <div class="calorie-measurement">
                 <h2>Calorie Measurement</h2>
                 <input type="number" id="calorie-input" placeholder="Enter calorie intake">
+
+                <div class="water-intake">
+                    <h2>Calorie Tracker</h2>
+                    <div class="pie-chart" id="water-chart">
+                        <div class="slice"></div>
+                    </div>
+
+                    
+                </div>
+
+              
             </div>
-            <div class="meal-plans">
-                <h2>Meal Plans</h2>
-                <!-- Add your meal plan content here -->
-                <ul>
-                    <li>Breakfast: Oatmeal with fruits</li>
-                    <li>Lunch: Grilled chicken with vegetables</li>
-                    <li>Dinner: Salmon with brown rice</li>
-                </ul>
-            </div>
+            
             <div class="bmi-calculator">
                 <h2>BMI Calculator</h2>
                 <label for="height">Height (cm):</label>
@@ -201,6 +210,16 @@
                 <input type="number" id="weight" placeholder="Enter weight">
                 <button onclick="calculateBMI()">Calculate BMI</button>
                 <p id="bmi-result"></p>
+            </div>
+
+            <div class="meal-plans">
+                <h2>Meal Plans</h2>
+                <!-- Add your meal plan content here -->
+                <ul>
+                    <li>Breakfast: Oatmeal with fruits</li>
+                    <li>Lunch: Grilled chicken with vegetables</li>
+                    <li>Dinner: Salmon with brown rice</li>
+                </ul>
             </div>
 
 
