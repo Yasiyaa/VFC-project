@@ -10,32 +10,98 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/shoppingCart.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/slicknav.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../assets/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/shoppingCart.css">
     <script src="vue.js"></script>
+
+    <style>
+        .trainerReg {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container_form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 800px;
+            align-content: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+
 </head>
-<!--? Preloader Start -->
-<div id="preloader-active">
-    <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="preloader-inner position-relative">
-            <div class="preloader-circle"></div>
-            <div class="preloader-img pere-text">
-                <img src="assets/img/logo/Logo.png" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Preloader Start -->
+
 <header>
     <!-- Header Start -->
     <div class="header-area header-transparent">
@@ -81,7 +147,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="hero-cap hero-cap2 pt-70">
-                            <h2>Shop Online</h2>
+                            <h2>Equipment Management</h2>
                         </div>
                     </div>
                 </div>
@@ -90,121 +156,61 @@
     </div>
     <!-- Hero End -->
     <!--?  Contact Area start  -->
-    <section class="item-selection">
-        <div class="container">
+    <section class="trainerReg">
 
-            <div class="row">
-                <section class="products">
-                    <div class="product">
-                        <img src="assets/img/equipments/bench2.jpg" alt="Product 1">
-                        <h2>Bench</h2>
-                        <p>Price: Rs.40 000/=</p>
-                        <button onclick="addToCart('Bench', 40000)">Add to Cart</button>
-                    </div>
+        <div class="container_form">
 
-                    <div class="product">
-                        <img src="assets/img/equipments/Rear-Delt-Fly-Gym-Machine.jpg" alt="Product 2">
-                        <h2>Rear Delt Fly</h2>
-                        <p>Price: Rs.80 000/=</p>
-                        <button onclick="addToCart('Rear Delt Fly', 80000)">Add to Cart</button>
-                    </div>
+            <h2>Member Details</h2>
+            <table class="member-table">
+                <thead>
+                    <tr>
+                        <th>Member Email</th>
+                        <th>Subscription Plan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>member1@example.com</td>
+                        <td>Basic Plan</td>
+                    </tr>
+                    <tr>
+                        <td>member2@example.com</td>
+                        <td>Premium Plan</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
 
-                    <div class="product">
-                        <img src="assets/img/equipments/dumbells.jpg" alt="Product 2">
-                        <h2>Dumbells 2 sets</h2>
-                        <p>Price: Rs.15 000/=</p>
-                        <button onclick="addToCart('Dumbells 2 sets', 15000)">Add to Cart</button>
-                    </div>
+            <h2>Order Details</h2>
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Address</th>
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>123 Main St, City</td>
+                        <td>Product A</td>
+                        <td>$49.99</td>
+                    </tr>
+                    <tr>
+                        <td>Jane</td>
+                        <td>Smith</td>
+                        <td>456 Elm Rd, Town</td>
+                        <td>Product B</td>
+                        <td>$29.99</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
 
-                    <div class="product">
-                        <img src="assets/img/equipments/2019-Big-Sell-Gym-Equipments-High-Pulldown-Muscle-Machine.webp"
-                            alt="Product 2">
-                        <h2>High Pulldown Machine</h2>
-                        <p>Price: Rs.40 000/=</p>
-                        <button onclick="addToCart('High Pulldown  Machine', 40000)">Add to Cart</button>
-                    </div>
-
-                    <div class="product">
-                        <img src="assets/img/equipments/ss.jpg" alt="Product 2">
-                        <h2>Back Machine </h2>
-                        <p>Price: Rs.95 000/=</p>
-                        <button onclick="addToCart('Back Machine', 95000)">Add to Cart</button>
-                    </div>
-
-                    <div class="product">
-                        <img src="assets/img/equipments/Dumbells (1).jpg" alt="Product 2">
-                        <h2>Dumbells 2 sets</h2>
-                        <p>Price: Rs.35 000/=</p>
-                        <button onclick="addToCart('Dumbells 2 sets', 35000)">Add to Cart</button>
-                    </div>
-
-                    <!-- Add more products here -->
-                </section>
-            </div>
-            <br>
-
-            <div class="pagination">
-                <!-- Page selector links will be added here -->
-                <a href="#" class="page-link">1</a>
-                <a href="#" class="page-link">2</a>
-                <a href="#" class="page-link">3</a>
-                <!-- Add more page links as needed -->
-            </div>
-            <br>
-
-
-            <div class="raw">
-                <section class="cart">
-                    <h2>Cart</h2>
-                    <ul id="cart-items">
-                        <!-- Cart items will be added dynamically -->
-                    </ul>
-                    <p>Total: $<span id="cart-total">0.00</span></p>
-
-                    <button onclick="clearCart()">Empty Cart</button>
-
-                </section>
-
-                <section class="order_placement">
-                    <h1>Place your order here</h1>
-                </section>
-                <br><br>
-                <section class="raw order_placement">
-                    <form  id="order_placement">
-                        <div class="mt-10">
-                            <input type="text" name="first_name"  placeholder="First Name" 
-                                 required v-model="first_name"
-                                class="single-input">
-                        </div>
-                        <div class="mt-10">
-                            <input type="text" name="last_name" placeholder="Last Name" 
-                                v-model="last_name" required class="single-input">
-                        </div>
-
-
-                        <div class="mt-10">
-
-                            <input type="text" name="address" placeholder="Address" 
-                                 required class="single-input" v-model="address">
-                        </div>
-                        <div class="button-group-area mt-40">
-
-
-
-                            <button v-on:click="placeOrder">
-                             Place order
-                            </button>
-
-                            <button class="genric-btn danger radius">Cancle</button>
-
-                        </div>
-                    </form>
-                </section>
-            </div>
-
-
-
-        </div>
     </section>
     <!-- Contact Area End -->
     <!-- ? services-area -->

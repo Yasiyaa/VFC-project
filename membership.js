@@ -3,7 +3,7 @@ var login = new Vue({
     data: {
         email: 'jason@gmaill.com',
         plan: 'basic',
-        payment:10000
+        payment:"true"
     },
     mounted() {
         
@@ -21,7 +21,7 @@ var login = new Vue({
         .then((res) => {
             
             if(res.status == 200){
-                window.location.href = './index.html'
+                window.location.href = './payment.html'
             }
   
         })
@@ -32,3 +32,6 @@ var login = new Vue({
         }
     }
   })
+
+
+

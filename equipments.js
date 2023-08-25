@@ -35,7 +35,7 @@ var login = new Vue({
         .post("http://localhost:3000/order/addNew", order)
         .then((res) => {
           if (res.status == 200) {
-            window.location.href = "./index.html";
+            window.location.href = "./payment.html";
           }
         })
         .catch((err) => {

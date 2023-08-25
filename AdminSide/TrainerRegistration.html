@@ -10,31 +10,77 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/shoppingCart.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/slicknav.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../assets/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/shoppingCart.css">
+    <script src="vue.js"></script>
+
+    <style>
+        .trainerReg {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container_form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            align-content: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
-<!--? Preloader Start -->
-<div id="preloader-active">
-    <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="preloader-inner position-relative">
-            <div class="preloader-circle"></div>
-            <div class="preloader-img pere-text">
-                <img src="assets/img/logo/loder.png" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Preloader Start -->
+
 <header>
     <!-- Header Start -->
     <div class="header-area header-transparent">
@@ -52,7 +98,7 @@
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="Trainers.html">Trainer</a></li>
                                 <li><a href="membership.html">Membeship</a></li>
-                                <li><a href="gallery.html">Diet Plan</a></li>
+                                <li><a href="diet plan.html">Diet Plan</a></li>
                                 <li><a href="equipments.html">Equipment</a></li>
                                 <li><a href="about.html">About us</a></li>
                             </ul>
@@ -80,7 +126,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="hero-cap hero-cap2 pt-70">
-                            <h2>Shop Online</h2>
+                            <h2>Trainer Management</h2>
                         </div>
                     </div>
                 </div>
@@ -89,92 +135,30 @@
     </div>
     <!-- Hero End -->
     <!--?  Contact Area start  -->
-    <section class="contact-section">
-        <div class="container">
+    <section class="trainerReg">
 
-            <div class="raw">
-                <div class="section-top-border">
-                    <div class="row">
-                        <div class="col-lg-8 col-md-8">
-                            <h3 class="mb-30">Form Element</h3>
-                            <form action="#">
-                                <div class="mt-10">
-                                    <input type="text" name="first_name" placeholder="First Name"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required
-                                    class="single-input">
-                                </div>
-                                <div class="mt-10">
-                                    <input type="text" name="last_name" placeholder="Last Name"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required
-                                    class="single-input">
-                                </div>
-                                <div class="mt-10">
-                                    <input type="text" name="last_name" placeholder="Last Name"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required
-                                    class="single-input">
-                                </div>
-                                <div class="mt-10">
-                                    <input type="email" name="EMAIL" placeholder="Email address"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required
-                                    class="single-input">
-                                </div>
-                                <div class="input-group-icon mt-10">
-                                    <div class="icon"><i class="fa fa-thumb-tack" aria-hidden="true"></i></div>
-                                    <input type="text" name="address" placeholder="Address" onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Address'" required class="single-input">
-                                </div>
-                                <div class="input-group-icon mt-10">
-                                    <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
-                                    <div class="form-select" id="default-select"">
-                                        <select>
-                                            <option value=" 1">City</option>
-                                            <option value="1">Dhaka</option>
-                                            <option value="1">Dilli</option>
-                                            <option value="1">Newyork</option>
-                                            <option value="1">Islamabad</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="input-group-icon mt-10">
-                                    <div class="icon"><i class="fa fa-globe" aria-hidden="true"></i></div>
-                                    <div class="form-select" id="default-select"">
-                                        <select>
-                                            <option value=" 1">Country</option>
-                                            <option value="1">Bangladesh</option>
-                                            <option value="1">India</option>
-                                            <option value="1">England</option>
-                                            <option value="1">Srilanka</option>
-                                        </select>
-                                    </div>
-                                </div>
-                               
-                            </form>
-                        </div>
-                       
-                    </div>
-                </div>
+        <div class="container_form">
+            <h2>Trainer Registration</h2> <br> 
+            <form>
 
-            </div>
-            <br>
-            <br>
-            <div class="raw">
-                <section class="cart">
-                    <h2>Cart</h2>
-                    <ul id="cart-items">
-                        <!-- Cart items will be added dynamically -->
-                    </ul>
-                    <p>Total: $<span id="cart-total">0.00</span></p>
-                    <a href="payment.html">
-                        <button onclick="checkout()">Checkout</button>
-                    </a>
+                <label for="profilePicture">Profile Picture:</label>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
 
-                    <button onclick="clearCart()">Empty Cart</button>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-                </section>
-            </div>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
 
 
+
+                <label for="courseVideos">Course Videos:</label>
+                <input type="file" id="courseVideos" name="courseVideos" accept="video/*" multiple required>
+
+                <button type="submit">Register</button>
+            </form>
         </div>
+
     </section>
     <!-- Contact Area End -->
     <!-- ? services-area -->
@@ -250,6 +234,11 @@
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 </div>
 
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="equipments.js"></script>
+
 <!-- JS here -->
 
 <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -283,7 +272,7 @@
 <script src="./assets/js/plugins.js"></script>
 <script src="./assets/js/main.js"></script>
 
-<script src="../shoppingCart.js"></script>
+<script src="../VFC project/shoppingcarttemp.js"></script>
 </body>
 
 </html>
