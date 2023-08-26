@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="../assets/css/nice-select.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/shoppingCart.css">
-    <script src="vue.js"></script>
+    <script src="../vue.js"></script>
 
     <style>
         .trainerReg {
@@ -161,7 +161,7 @@
         <div class="container_form">
 
             <h2>Member Details</h2>
-            <table class="member-table">
+            <table class="member-table" id="MemberDetails">
                 <thead>
                     <tr>
                         <th>Member Email</th>
@@ -169,45 +169,32 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>member1@example.com</td>
-                        <td>Basic Plan</td>
+                    <tr v-for="member in memberDetails">
+                        <td>{{member.email}}</td>
+                        <td>{{member.plan}}</td>
                     </tr>
-                    <tr>
-                        <td>member2@example.com</td>
-                        <td>Premium Plan</td>
-                    </tr>
-                    <!-- Add more rows as needed -->
+                   
                 </tbody>
             </table>
 
             <h2>Order Details</h2>
-            <table class="order-table">
+            <table class="order-table" id="OrderDetails">
                 <thead>
                     <tr>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Address</th>
-                        <th>Item</th>
                         <th>Price</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>123 Main St, City</td>
-                        <td>Product A</td>
-                        <td>$49.99</td>
+                    <tr v-for="order in orderDetails">
+                        <td>{{order.firstname}}</td>
+                        <td>{{order.lastname}}</td>
+                        <td>{{order.address}}</td>
+                        <td>{{order.total}}</td>
                     </tr>
-                    <tr>
-                        <td>Jane</td>
-                        <td>Smith</td>
-                        <td>456 Elm Rd, Town</td>
-                        <td>Product B</td>
-                        <td>$29.99</td>
-                    </tr>
-                    <!-- Add more rows as needed -->
+                   
                 </tbody>
             </table>
 
@@ -281,6 +268,10 @@
     </div>
     <!-- Footer End-->
 </footer>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="MembershipAndOrderDetails.js"></script>
+
+
 <!-- Scroll Up -->
 <div id="back-top">
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>

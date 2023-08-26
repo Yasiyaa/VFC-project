@@ -24,6 +24,10 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="vue.js"></script>
+
+
 </head>
 
 <body class="black-bg">
@@ -93,7 +97,7 @@
         </div>
         <!-- Hero End -->
         <!--? Team -->
-        <section class="team-area fix section-padding30">
+        <section class="team-area fix section-padding30" id="trainer">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -103,75 +107,20 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" v-for="trainer in trainers">
                         <div class="single-cat text-center mb-30">
                             <div class="cat-icon">
-                                <img src="assets/img/trainers/trainer1.png" alt="" style="height: 250px; width: 362px;">
+                                <img :src="'assets/img/trainers/'+trainer.imagePath+'.png'" alt="" style="height: 250px; width: 362px;">
                             </div>
                             <div class="cat-cap">
-                                <h5><a href="services.html">Steve Hudson</a></h5>
-                                <p>Bachelor's degree in exercise science, physical education and kinesiology.
-                                    Certified personal trainer (CPT) from the reputable organization of American College
-                                    of Sports Medicine (ACSM).
-                                    CPR and AED certification.
-                                    5+ years of experience working as a personal trainer.
-                                    Experience working with a variety of clients, including those with different fitness
-                                    levels and goals.
-                                    Excellent knowledge of anatomy, physiology, and exercise science.
-                                    Ability to assess clients' fitness levels and develop individualized training
-                                    programs.
-                                    Ability to motivate and coach clients.
-                                    Excellent communication and interpersonal skills.</p>
+                                <h5><a href="services.html">{{trainer.name}}</a></h5>
+                                <p>{{trainer.about}}</p>
 
                                 <a class="border-btn" href="VideoLibrary.html">Select</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-cat text-center mb-30">
-                            <div class="cat-icon">
-                                <img src="assets/img/trainers/trainer2.png" alt="" style="height: 250px; width: 362px;">
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="services.html">Edward Collins </a></h5>
-                                <p>Bachelor's degree in Exercise Science. equipped with a solid foundation in anatomy,
-                                    physiology, and exercise programming.
-                                    Completed a nationally recognized certification program that ensures competence in
-                                    designing safe and effective workout routines tailored to individual needs and
-                                    goals.
-                                    10 years of experience as a professional workout trainer.
-                                    Maintain current certification in cardiopulmonary resuscitation (CPR) and first aid.
-                                    Specialized in Strength Training, Cardiovascular Conditioning and Functional
-                                    Training.
-                                </p>
-
-                                <a class="border-btn" href="VideoLibrary.html">Select</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-cat text-center mb-30">
-                            <div class="cat-icon">
-                                <img src="assets/img/trainers/trainer3.png" alt="" style="height: 250px; width: 362px;">
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="services.html">John Dave</a></h5>
-                                <p>Associate's degree in physical education.
-                                    Certified personal trainer (CPT) from the International Sports Sciences Association
-                                    (ISSA).
-                                    8 years of experience as a professional trainer.
-                                    Excellent knowledge of human anatomy and physiology.
-                                    Strong understanding of exercise programming.
-                                    Specialized in weight lifting, stretching & breathing, group exercise instruction,
-                                    sports performance, corrective exercise, nutrition and rehabilitation.
-                                    Ability to assess clients' fitness levels and create individualized exercise plans.
-                                </p>
-
-
-                                <a class="border-btn" href="VideoLibrary.html">Select</a>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -246,6 +195,12 @@
         </div>
         <!-- Footer End-->
     </footer>
+
+    
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="Trainers.js"></script>
+
+
     <!-- Scroll Up -->
     <div id="back-top">
         <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>

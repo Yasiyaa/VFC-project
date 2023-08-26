@@ -137,23 +137,23 @@
     <!--?  Contact Area start  -->
     <section class="trainerReg">
 
-        <div class="container_form">
-            <h2>Trainer Registration</h2> <br> 
+        <div class="container_form" id="Registration">
+            <h2>Trainer Registration</h2> <br>
             <form>
 
-                <label for="profilePicture">Profile Picture:</label>
-                <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
+                <div>
+                    <input type="file" @change="uploadFile" ref="file">
+                    <button @click="submitFile">Upload!</button>
+                </div>
 
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required v-model="name">
 
                 <label for="description">Description:</label>
-                <textarea id="description" name="description" rows="4" required></textarea>
+                <textarea id="description" name="description" rows="4" required v-model="description"></textarea>
 
-
-
-                <label for="courseVideos">Course Videos:</label>
-                <input type="file" id="courseVideos" name="courseVideos" accept="video/*" multiple required>
+                <!-- <label for="courseVideos">Course Videos:</label> -->
+                <!-- <input type="file" id="courseVideos" name="courseVideos" accept="video/*" multiple required> -->
 
                 <button type="submit">Register</button>
             </form>
@@ -237,7 +237,7 @@
 
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="equipments.js"></script>
+<script src="TrainerRegistration.js"></script>
 
 <!-- JS here -->
 
