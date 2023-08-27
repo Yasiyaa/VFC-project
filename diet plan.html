@@ -158,104 +158,13 @@
             </div>
             <br>
 
-            <div class="water-intake">
-                <h2>Daily Water Intake</h2>
-                <div class="pie-chart" id="water-chart">
-                    <div class="slice"></div>
-                </div>
-                <p id="water-intake-text">0 / 20 bottels</p>
-
-                <div class="calorie-measurement">
-                    <h2>Water Measurement</h2>
-                    <input type="number" id="water-input" placeholder="Enter water- intake" max="20">
-                    <button onclick="updateWaterIntake()">update</button>
-
-                </div>
-            </div>
             <!-- new method  -->
 
             <!-- Assuming you have the HTML code as mentioned in the question -->
-            <script>
-                function updateWaterIntake() {
-                    const maxWaterIntake = 8; // The maximum number of glasses of water
-                    const waterIntakeInput = document.getElementById("water-input");
-                    const waterIntakeText = document.getElementById("water-intake-text");
-                    const pieChartSlice = document.querySelector(".slice");
-
-                    // Get the value from the input and convert it to a number
-                    const waterIntake = parseInt(waterIntakeInput.value, 10);
-
-                    // Validate the input to be a positive number
-                    if (isNaN(waterIntake) || waterIntake < 0) {
-                        alert("Please enter a valid positive number for water intake.");
-                        return;
-                    }
-
-                    updatePieChart(waterIntake, 8);
-
-                    console.log("check");
-                    
-                    function updatePieChart(value, maxValue) {
-                    const chart = document.getElementById('water-chart');
-                    const waterIntakeText = document.getElementById('water-intake-text');
-                    const percentage = (value / maxValue) * 100;
-
-                    chart.style.transform = `rotate(${percentage * 3.6}deg)`; // Multiply by 3.6 to convert percentage to degrees
-                    waterIntakeText.textContent = `${value} / ${maxValue} glasses`;
-                }
-
-                }
+     
 
 
-                function UpdateCaloryIntake() {
-                    const maxWaterIntake = 8; // The maximum number of glasses of water
-                    const waterIntakeInput = document.getElementById("water-input");
-                    const waterIntakeText = document.getElementById("water-intake-text");
-                    const pieChartSlice = document.querySelector(".slice");
-
-                    // Get the value from the input and convert it to a number
-                    const waterIntake = parseInt(waterIntakeInput.value, 10);
-
-                    // Validate the input to be a positive number
-                    if (isNaN(waterIntake) || waterIntake < 0) {
-                        alert("Please enter a valid positive number for water intake.");
-                        return;
-                    }
-
-                    updatePieChart(waterIntake, 8);
-
-                    console.log("check");
-                    
-                    function updatePieChart(value, maxValue) {
-                    const chart = document.getElementById('water-chart');
-                    const waterIntakeText = document.getElementById('water-intake-text');
-                    const percentage = (value / maxValue) * 100;
-
-                    chart.style.transform = `rotate(${percentage * 3.6}deg)`; // Multiply by 3.6 to convert percentage to degrees
-                    waterIntakeText.textContent = `${value} / ${maxValue} glasses`;
-                }
-
-                }
-            </script>
-
-
-            <div class="calorie-measurement">
-                <h2>Calorie Measurement</h2>
-                <input type="number" id="calorie-input" placeholder="Enter calorie intake">
-                <button onclick="updateCaloryIntake()">update</button>
-
-                <div class="calorie-intake">
-                    <h2>Calorie Tracker</h2>
-                    <div class="pie-chart" id="water-chart">
-                        <div class="slice"></div>
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
+           
             <div class="bmi-calculator">
                 <h2>BMI Calculator</h2>
                 <label for="height">Height (cm):</label>
