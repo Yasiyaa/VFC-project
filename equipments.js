@@ -6,6 +6,7 @@ var login = new Vue({
     address: "",
     selectedItems: [],
     total: 95000,
+    telephone:123456,
 
     // all items
     equipments: [],
@@ -35,6 +36,7 @@ var login = new Vue({
         address: this.address,
         items: this.selectedItems,
         total: this.total,
+        telephone : this.telephone
       };
 
       axios
