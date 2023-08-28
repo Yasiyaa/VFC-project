@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="../assets/css/nice-select.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/shoppingCart.css">
-    <script src="vue.js"></script>
+    <script src="../vue.js"></script>
 
     <style>
         .trainerReg {
@@ -137,18 +137,18 @@
 
         <div class="container_form">
            
-            <form>
+            <form id="AddingSection">
 
                 <label for="profilePicture">Item Image:</label>
-                <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required  >
 
                 <label for="name">Product Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required v-model="name">
 
                 <label for="name">Product Price:</label>
-                <input type="text" id="price" name="price" required>
+                <input type="text" id="price" name="price" required v-model="price">
 
-                <button type="submit">Add to Shop</button>
+                <button type="button" v-on:click="addEquipment">Add to Shop</button>
             </form>
         </div>
 
@@ -228,7 +228,7 @@
 
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="equipments.js"></script>
+<script src="./EquipmentAdd.js"></script>
 
 <!-- JS here -->
 

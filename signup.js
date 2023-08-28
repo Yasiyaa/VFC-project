@@ -2,7 +2,10 @@ var login = new Vue({
     el: "#signupForm",
     data: {
         username: '',
-        password: ''
+        password: '',
+        telephone: '',
+        name:''
+
     },
     mounted() {
         
@@ -14,7 +17,13 @@ var login = new Vue({
   
         addUser: function(){
   
-        var credentials  = { password: this.password, email: this.username};
+        var credentials  = { 
+            password: this.password, 
+            email: this.username,
+            name: this.name,
+            telephone: this.telephone
+        
+        };
   
         axios.post('http://localhost:3000/user/addNew',credentials)
         .then((res) => {

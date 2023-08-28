@@ -148,13 +148,20 @@
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required v-model="name">
 
+                <label for="name">Username:</label>
+                <input type="text" id="username" name="username" required v-model="username">
+
+                <label for="name">Password:</label>
+                <input type="text" id="password" name="password" required v-model="password">
+
+
                 <label for="description">Description:</label>
                 <textarea id="description" name="description" rows="4" required v-model="description"></textarea>
 
                 <!-- <label for="courseVideos">Course Videos:</label> -->
                 <!-- <input type="file" id="courseVideos" name="courseVideos" accept="video/*" multiple required> -->
 
-                <button type="submit">Register</button>
+                <button type="button" v-on:click="registerTrainer">Register</button>
             </form>
         </div>
 

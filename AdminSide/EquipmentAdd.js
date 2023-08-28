@@ -1,23 +1,22 @@
-var registration = new Vue({
-  el: "#Registration",
+var addingSection = new Vue({
+  el: "#AddingSection",
   data: {
     name:'',
-    description:'',
-    username:'',
-    password:''
+    price:'',
+    imagePath:'',
+
   },
   mounted() {},
   updated() {},
 
   methods: {
 
-    registerTrainer: function () {
+    addEquipment: function () {
       var trainer = {
-        imagePath:'trainer1',
+        imagePath:'e3',
         name: this.name,
-        username: this.username,
-        password: this.password,
-        description: this.description
+        price: this.price,
+       
       };
 
       axios
