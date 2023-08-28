@@ -5,8 +5,8 @@ var login = new Vue({
     last_name: "",
     address: "",
     selectedItems: [],
-    total: 95000,
-    telephone:123456,
+    total: 0,
+    telephone:"",
 
     // all items
     equipments: [],
@@ -35,7 +35,7 @@ var login = new Vue({
         lastname: this.last_name,
         address: this.address,
         items: this.selectedItems,
-        total: this.total,
+        total: this.showTotal,
         telephone : this.telephone
       };
 
@@ -54,12 +54,12 @@ var login = new Vue({
 
     addToCart: function (item) {
       this.selectedItems.push(item);
-      this.showTotal = item.price + this.showTotal;
+      this.showTotal = parseInt(this.showTotal) + parseInt(item.price)
     },
     removeCartItem: function (item) {
       var index = this.selectedItems.indexOf(item);
       this.selectedItems.splice(index,1);
-      this.showTotal = this.showTotal - item.price;
+      this.showTotal = parseInt(this.showTotal) - parseInt(item.price);
     },
   },
 });

@@ -20,10 +20,10 @@ var addingSection = new Vue({
       };
 
       axios
-        .post("http://localhost:3000/trainer/add", trainer)
+        .post("http://localhost:3000/equipment/add", trainer)
         .then((res) => {
           if (res.status == 200) {
-            alert('Trainer added!')
+            alert('Equipment added!')
           }
         })
         .catch((err) => {

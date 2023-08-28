@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="../assets/css/nice-select.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/shoppingCart.css">
-    <script src="vue.js"></script>
+    <script src="../vue.js"></script>
 
     <style>
         .trainerReg {
@@ -141,8 +141,8 @@
             <form>
 
                 <div>
-                    <input type="file" @change="uploadFile" ref="file">
-                    <button @click="submitFile">Upload!</button>
+                    <input type="file"  >
+                    
                 </div>
 
                 <label for="name">Name:</label>
@@ -156,7 +156,7 @@
 
 
                 <label for="description">Description:</label>
-                <textarea id="description" name="description" rows="4" required v-model="description"></textarea>
+                <textarea id="description" name="description" rows="4" required v-model="about"></textarea>
 
                 <!-- <label for="courseVideos">Course Videos:</label> -->
                 <!-- <input type="file" id="courseVideos" name="courseVideos" accept="video/*" multiple required> -->

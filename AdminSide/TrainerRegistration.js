@@ -2,7 +2,7 @@ var registration = new Vue({
   el: "#Registration",
   data: {
     name:'',
-    description:'',
+    about:'',
     username:'',
     password:''
   },
@@ -17,7 +17,7 @@ var registration = new Vue({
         name: this.name,
         username: this.username,
         password: this.password,
-        description: this.description
+        about: this.about
       };
 
       axios
